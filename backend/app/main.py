@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from .api import news  # Import the news router
+from .api import news  
+from .core import ontology_manager
 
 app = FastAPI()
 

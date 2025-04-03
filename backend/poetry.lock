@@ -312,6 +312,17 @@ files = [
 ]
 
 [[package]]
+name = "owlready2"
+version = "0.41"
+description = "A package for ontology-oriented programming in Python: load OWL 2.0 ontologies as Python objects, modify them, save them, and perform reasoning via HermiT. Includes an optimized RDF quadstore."
+optional = false
+python-versions = ">=3.6"
+groups = ["main"]
+files = [
+    {file = "Owlready2-0.41.tar.gz", hash = "sha256:2ac431d8a3522da230b0c6530fccc28dbdc397ed359c1a6669db91a2d58fdafc"},
+]
+
+[[package]]
 name = "packaging"
 version = "24.2"
 description = "Core utilities for Python packages"
@@ -975,4 +986,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.8"
-content-hash = "623811794f9ae646b3d799cc8b03a4a91137d4a60ca4d5e27fbd9272a173ce13"
+content-hash = "300025ac530bca8d66969dde10837baefb5ef3635b8e7a228b403f501aac890c"

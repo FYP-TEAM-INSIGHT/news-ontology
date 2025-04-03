@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl"
+         xmlns="file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#">
+
+<owl:Ontology rdf:about="file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl"/>
+
+<owl:ObjectProperty rdf:about="#publishedBy">
+  <rdfs:domain rdf:resource="#NewsArticle"/>
+  <rdfs:range rdf:resource="#NewsSource"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasCategory">
+  <rdfs:domain rdf:resource="#NewsArticle"/>
+  <rdfs:range rdf:resource="#Category"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#mentionsEntity">
+  <rdfs:domain rdf:resource="#NewsArticle"/>
+  <rdfs:range rdf:resource="#Entity"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasTitle">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#NewsArticle"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasSourceString">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#NewsArticle"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasFullText">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#NewsArticle"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasTimestamp">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#NewsArticle"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasEntityName">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#Entity"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasCategoryName">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  <rdfs:domain rdf:resource="#Category"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#NewsArticle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Entity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Category">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Person">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Organization">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Location">
+  <rdfs:subClassOf rdf:resource="#Entity"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NewsSource">
+  <rdfs:subClassOf rdf:resource="#Organization"/>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#BBC_News_NewsSource_5c73870c">
+  <rdf:type rdf:resource="#NewsSource"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBC News</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Politics_Category_c7db445c">
+  <rdf:type rdf:resource="#Category"/>
+  <hasCategoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Politics</hasCategoryName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#article_95efa1b1f3534d6b820a9e9f80fab6aa">
+  <rdf:type rdf:resource="#NewsArticle"/>
+  <publishedBy rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#BBC_News_NewsSource_5c73870c"/>
+  <hasCategory rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Politics_Category_c7db445c"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#John_Doe_Person_ac9c363c"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#ExampleLand_Location_7403cf51"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Capital_City_Location_7ae14911"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Election_Committee_Organization_da6de5e4"/>
+  <hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-27T10:00:00Z</hasTimestamp>
+  <hasSourceString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBC News</hasSourceString>
+  <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Election results announced in ExampleLand</hasTitle>
+  <hasFullText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Doe wins the election. The results were certified in Capital City. The Election Committee confirmed the outcome.</hasFullText>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#John_Doe_Person_ac9c363c">
+  <rdf:type rdf:resource="#Person"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Doe</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#ExampleLand_Location_7403cf51">
+  <rdf:type rdf:resource="#Location"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExampleLand</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Capital_City_Location_7ae14911">
+  <rdf:type rdf:resource="#Location"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital City</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Election_Committee_Organization_da6de5e4">
+  <rdf:type rdf:resource="#Organization"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Election Committee</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Global_Sports_NewsSource_967f6e50">
+  <rdf:type rdf:resource="#NewsSource"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Sports</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Sports_Category_9895cda8">
+  <rdf:type rdf:resource="#Category"/>
+  <hasCategoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sports</hasCategoryName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#article_2138da7b015c45fea1a09e7ac58c6524">
+  <rdf:type rdf:resource="#NewsArticle"/>
+  <publishedBy rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Global_Sports_NewsSource_967f6e50"/>
+  <hasCategory rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Sports_Category_9895cda8"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Tigers_Organization_270c34aa"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Lions_Organization_8a77a34b"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Grand_Stadium_Location_31e5d118"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Jane_Smith_Person_bcb31d1d"/>
+  <hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-26T20:30:00Z</hasTimestamp>
+  <hasSourceString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Sports</hasSourceString>
+  <hasFullText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Tigers defeated the Lions in the final match held in Grand Stadium. Jane Smith scored the winning goal.</hasFullText>
+  <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tigers win championship game</hasTitle>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Tigers_Organization_270c34aa">
+  <rdf:type rdf:resource="#Organization"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tigers</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Lions_Organization_8a77a34b">
+  <rdf:type rdf:resource="#Organization"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lions</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Grand_Stadium_Location_31e5d118">
+  <rdf:type rdf:resource="#Location"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grand Stadium</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Jane_Smith_Person_bcb31d1d">
+  <rdf:type rdf:resource="#Person"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jane Smith</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Tech_Today_NewsSource_28e86e86">
+  <rdf:type rdf:resource="#NewsSource"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tech Today</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Technology_Category_2596d777">
+  <rdf:type rdf:resource="#Category"/>
+  <hasCategoryName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technology</hasCategoryName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#article_f13ac5ef537743de801ffa03bc6555cf">
+  <rdf:type rdf:resource="#NewsArticle"/>
+  <publishedBy rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Tech_Today_NewsSource_28e86e86"/>
+  <hasCategory rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Technology_Category_2596d777"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Innovate_Corp_Organization_70507c25"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Silicon_Valley_Location_a48afd41"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Alice_Brown_Person_28cfd3f8"/>
+  <hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-27T14:15:00Z</hasTimestamp>
+  <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovate Corp launches new gadget</hasTitle>
+  <hasFullText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovate Corp, based in Silicon Valley, unveiled its latest product. CEO Alice Brown presented the device.</hasFullText>
+  <hasSourceString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tech Today</hasSourceString>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Innovate_Corp_Organization_70507c25">
+  <rdf:type rdf:resource="#Organization"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Innovate Corp</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Silicon_Valley_Location_a48afd41">
+  <rdf:type rdf:resource="#Location"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silicon Valley</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Alice_Brown_Person_28cfd3f8">
+  <rdf:type rdf:resource="#Person"/>
+  <hasEntityName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice Brown</hasEntityName>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#article_2733ced52cdd476d92204840e1228bab">
+  <rdf:type rdf:resource="#NewsArticle"/>
+  <publishedBy rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#BBC_News_NewsSource_5c73870c"/>
+  <hasCategory rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Politics_Category_c7db445c"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#John_Doe_Person_ac9c363c"/>
+  <mentionsEntity rdf:resource="#file://g:\FIT\FIT_FYP\CODES\ontology_projects\news_english\v1\news_ontology_interactive.owl#Capital_City_Location_7ae14911"/>
+  <hasTimestamp rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2023-10-28T09:00:00Z</hasTimestamp>
+  <hasSourceString rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBC News</hasSourceString>
+  <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Doe visits Capital City after election</hasTitle>
+  <hasFullText rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newly elected leader John Doe met with officials in Capital City today.</hasFullText>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
