@@ -1,0 +1,32 @@
+
+
+services:
+  ner-server:
+    build:
+      context: ./stanford-ner
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - JAVA_OPTS=-mx1g
+    volumes:
+      - ./stanford-ner/classifiers:/app/classifiers
+    restart: unless-stopped
+    networks:
+      - internal-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    networks:
+      - internal-network
+    restart: unless-stopped
+    depends_on:
+      - ner-server
+
+networks:
+  internal-network:
+    driver: bridge
