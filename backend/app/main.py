@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from .api import news  
+from .api import news, health  # Added import for health router
 from .core import ontology_manager
 
 app = FastAPI()
 
 app.include_router(news.router)  # Include the news router in the app
+app.include_router(health.router)  # Include the health router in the app
 
 
 @app.get("/")
