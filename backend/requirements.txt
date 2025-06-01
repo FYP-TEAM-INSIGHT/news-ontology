@@ -1,7 +1,9 @@
 fastapi>=0.103.2,<0.104.0
 uvicorn[standard]>=0.23.2,<0.24.0
 owlready2>=0.41,<0.42.0
-
+scikit-learn = ^1.6.1
+joblib = ^1.5.1
+    
 # Dev dependencies (optional)
 pytest>=7.4.2,<7.5.0
 requests>=2.31.0,<2.32.0

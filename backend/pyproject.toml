@@ -2,14 +2,16 @@
 name = "news-ontology-backend"
 version = "0.1.0"
 description = "Backend API for the News Ontology project"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Team insight <fyp.teaminsight@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
 fastapi = "^0.103.2"
 uvicorn = {extras = ["standard"], version = "^0.23.2"}
 owlready2 = "^0.41"
+scikit-learn = "^1.6.1"
+joblib = "^1.5.1"
 
 
 [tool.poetry.group.dev.dependencies]
